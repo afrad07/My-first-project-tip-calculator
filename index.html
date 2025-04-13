@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <div id="input-field-grp">
+            <label for="billAmt">Enter The Bill Amount :</label>
+            <div class="counter">
+                <div>₹</div>
+                <input id="billAmt"  type="number">
+            </div>
+
+            <br>
+
+            <label for="counterInput">Enter Tip Percentage :</label>
+            <div class="counter">
+                <input id="percInput" type="number">
+                <div>%</div>
+            </div>
+
+            <br>
+
+            <label for="counterInput">Enter Number Of People :</label>
+            <div class="counter">
+                <button onclick="subtract()">-</button>
+                <input id="counterInput"  value="1" type="number">
+                <button onclick="add()">+</button>
+            </div>
+
+            <br>
+    </div>
+
+    <button id="calculateBtn">Calculate</button>
+
+    <div id="output-field-grp">
+        <output><h2>Tip Per Person :<i id="output"></i></h2><output>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
