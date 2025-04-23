@@ -15,7 +15,7 @@ document.getElementById("billAmt").addEventListener("keypress", function(e){
 })
 
 document.getElementById("percInput").addEventListener("keypress", function(e){
-    if(e.key == "Enter"){
+    if(e.key == "Space"){
         tipPerc = document.getElementById("percInput").value;
         console.log(tipPerc)
     }
