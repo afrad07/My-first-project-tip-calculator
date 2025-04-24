@@ -3,22 +3,19 @@ let tipPerc;
 let tipAmt;
 let tipPerPerson;
 let x;
+let y;
 let output = document.getElementById("output");
 
 const calculateBtn = document.getElementById("calculateBtn");
 
-document.getElementById("billAmt").addEventListener("keypress", function(e){
-    if(e.key == "Enter"){
+document.getElementById("billAmt").addEventListener("input", function(e){
         billAmt = document.getElementById("billAmt").value;
         console.log(billAmt)
-    }
 })
 
-document.getElementById("percInput").addEventListener("keypress", function(e){
-    if(e.key == "Enter"){
+document.getElementById("percInput").addEventListener("input", function(e){
         tipPerc = document.getElementById("percInput").value;
         console.log(tipPerc)
-    }
 })
 
 let count = 1;
@@ -42,8 +39,8 @@ console.log(noOfPeople);
 function calculate(){
     tipAmt = billAmt * tipPerc;
     x = tipAmt / 100;
-    tipPerPerson = x / document.getElementById("counterInput").value;
-    output.innerText = "₹" + tipPerPerson;
+
+    output.innerText = "₹" + x / document.getElementById("counterInput").value;
 }
 
 calculateBtn.addEventListener("click", calculate)
@@ -53,3 +50,5 @@ calculateBtn.addEventListener("click", calculate)
 
 // let multiply = tipPerc*billAmt;
 // console.log(multiply)
+
+console.log(document.getElementsByClassName("test").onInput);
